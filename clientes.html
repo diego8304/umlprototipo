@@ -266,24 +266,6 @@ $(document).ready(function(){ <!-- --------> ejecuta el script jquery cuando el 
 
 
 
-$(document).ready(function(){ <!-- --------> ejecuta el script jquery cuando el documento ha terminado de cargarse -->
-  $("#b5").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
-    $("#mostrar3").dialog({ <!--  ------> muestra la ventana  -->
-      width: 560,  <!-- -------------> ancho de la ventana -->
-      height: 750,<!--  -------------> altura de la ventana -->
-      show: "scale", <!-- -----------> animación de la ventana al aparecer -->
-      hide: "scale", <!-- -----------> animación al cerrar la ventana -->
-      resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
-      position: "center",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
-      modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana est 
-    });
-  });
-      
-  });
-
-
-
-
 </script>
 
 
@@ -530,12 +512,38 @@ $(document).ready(function(){ <!-- --------> ejecuta el script jquery cuando el 
   <input id="btnAceptar" onclick="validaregistro()" name="btninsertar" size="3" type="button" value="GRABAR" />
 </div>
 
-<div id="mostrar2" class="ventanas" title="EDITAR EMPLEADO" >
+<div id="mostrar2" class="ventanas" title="MOSTRAR CLIENTE" >
                 
 <form action="#" method="GET" name="formu" class="formularios" >
- 
   <fieldset>
-    <legend>EDITAR EMPLEADO</legend>
+    <legend>MOSTRAR CLIENTE</legend>
+    Tipo de Busqueda:<br/>
+    <select name="rol">
+    <option value="0">Descripcion</option>
+    <option value="1">Identificacion</option>
+    </select>
+    <div id="ro"></div> 
+     Tipo de Documento:<br/>
+    <select name="tipo">
+    <option value="0">Tipo Documento</option>
+    <option value="1">Cedula de Ciudadania</option>
+    <option value="2">Cedula de Extranjeria</option>
+    <option value="3">Tarjeta de Identidad</option>
+    </select>
+
+    <input type="text" name="buscar" value="" id="buscar" />
+    <div id="ape"></div>
+
+  </fieldset>
+
+ <input id="btnAceptar" onclick="validaregistro()" name="btninsertar" size="3" type="button" value="BUSCAR " />
+
+  
+ 
+ </form>
+<hr>
+<fieldset>
+    <legend>Resultados</legend>
     Nombres:<br/>
     <input type="text" name="nombre" value="" maxlength="15" id="nombre"/>
     <div id="nom"></div>
@@ -576,46 +584,12 @@ $(document).ready(function(){ <!-- --------> ejecuta el script jquery cuando el 
     E-mail:<br/>
     <input type="text" name="email" value="" size="40" maxlength="45" id="email" />
     <div id="mail"></div>
-    Cargo:<br/>
-    <select name="cargo">
-    <option value="0">Seleccione Cargo</option>
-    <option value="1">Administrador</option>
-    <option value="2">Mesero</option>
-    <option value="3">Cajero</option>
-    </select> 
-    <div id="car"></div>
-    Rol Usuario:<br/>
-    <select name="rol">
-    <option value="0">Seleccione Rol</option>
-    <option value="1">Administrador</option>
-    <option value="2">Mesero</option>
-    <option value="3">Cajero</option>
-    </select>
-    <div id="ro"></div> 
-    Usuario: 
-    <br/>
-    <input type="text" name="usuario" value="" maxlength="15" id="usuario" onblur="verificar(document.formu.usuario.value,'usu','verifica.php')"/>
-    <div id="usu"></div>
-    Password: 
-    <br/>
-    <input type="password" name="pass" value="" maxlength="12" id="password"/>
-    <div id="pass"></div>
-    Confirmar Password: 
-    <br/>
-    <input type="password" name="pass1" value="" maxlength="12" id="password"/>
-    <div id="pass1"></div>
-    <br/>
-
-
-
-  </fieldset>
-
- <input id="btnAceptar" onclick="validaregistro()" name="btninsertar" size="3" type="button" value="Grabar Registro" />
- <input id="btnAceptar1" name="btninsertar" size="3" type="button" value="No se Puede Ingresar el Registro" style="display:none" />
- <input id="limpiar" onclick="clean()" name="limpiar" size="3" type="reset" value="limpiar Formulario" />
   
- 
- </form>
+<hr>
+
+    <input id="btnAceptar" onclick="validaregistro()" name="btninsertar" size="3" type="button" value="ACEPTAR " />
+
+</div>
  
 </div>
 
