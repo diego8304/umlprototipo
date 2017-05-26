@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>SISTEMA DE GESTION TECNOLOGICA ADMINISTRATIVA </title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stylus.css" rel="stylesheet">
+    <link href="js/jquery-ui.min.css" rel="stylesheet">
+    <link href="js/jquery-ui.structure.min.css" rel="stylesheet">
+    <link href="js/jquery-ui.theme.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+<body>
+       
+<header id="banner">
+<div class="container">
+<div class="row">
+<div class="col-md-7"><h1>SISTEMA DE GESTION </h1></div>
+<div class="col-md-7"><h4>CLIENTES -INSTITUTO TECNOLOGICO </h4></div>
+</div>
+</div>
+</header>
+
+<!--Barra de Navegacion-->
+
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+
+<nav class=" menu navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" 
+            data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    
+    <div class="collapse navbar-collapse menup1" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav menup1">
+        <li class="dropdown menup">
+          <a href="menu.html">  SALIR 
+          </a>
+        </li>
+      </ul>
+
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+  </div>
+</div>
+
+
+
+<!--Modulos de Contenido-->
+
+  <div class="container">
+  <section id="modulos">
+  <div class="row">
+
+<div class="col-md-3">
+</div>  
+
+<div class="col-md-3">
+<article class="texto2" >
+<header class="tituloa"><h3>REGISTRAR CLIENTE</h3></header>
+<figure><img src="img/cliente/registrar.jpg" height="150" width="200" alt="" align="center"></figure>
+<div id="b2" class="link1"><a href="#">Ingresar</a></div>
+</article>
+</div>
+
+
+<div class="col-md-3">
+<article class="texto3">
+    <header class="tituloa"><h3>EDITAR CLIENTE</h3></header>
+    <figure><img src="img/cliente/editarc.png" height="150" width="200" alt="" align="center"></figure>
+<div id="b1" class="link1"><a href="#">Ingresar</a></div>
+ </article>
+ </div>
+
+<div class="col-md-2">
+</div> 
+
+</section>
+</div>
+
+
+<div class="container">
+  <section id="modulos">
+  <div class="row">   
+
+<div class="col-md-3">
+</div>  
+
+<div class="col-md-3">
+<article class="texto2" >
+<header class="tituloa"><h3>CAMBIAR PASSWORD</h3></header>
+<figure><img src="img/cliente/cambiarp.png" height="150" width="200" alt=""></figure>
+<div id="b3" class="link1"><a href="#">Ingresar</a></div>
+</article>
+</div>
+
+
+<div class="col-md-3">
+<article class="texto3">
+    <header class="tituloa"><h3>MOSTRAR CLIENTE</h3></header>
+    <figure><img src="img/cliente/buscarc.png" height="150" width="200" alt=""></figure>
+<div id="b4" class="link1"><a href="#">Ingresar</a></div>
+ </article>
+ </div>
+
+
+</section>
+</div>
+
+
+<div class="container">
+  <section id="modulos">
+  <div class="row">   
+
+<div class="col-md-12">
+</div> 
+
+<div class="col-md-12">
+</div> 
+
+</section>
+</div>
+
+
+<!--Pie de Pagina -->
+
+<div class="container">
+
+  <footer class="pie">
+  <div class="row">
+    <div class="col-md-4"> </div>
+  <div class="col-md-4"> 
+   <nav class="navegacion"><a href="">INICIO</a> | <a href="">PRODUCTOS</a> | <a href="">NOSOTROS</a> | <a href="">CONTACTANOS</a> </nav> 
+  <section class="opciones">
+  </section>
+  </footer>
+
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+
+ $(function() {
+    $('.tooltip-carousel').popover();
+
+    $('#carousel-example-generic').on('slide.bs.carousel', function() {
+      $('.tooltip-carousel').popover('hide');
+      $(this).find('.caraousel-tooltip-item.active').fadeOut(function() {
+        $(this).removeClass('active');
+      });
+    });
+
+    $('#carousel-example-generic').on('slid.bs.carousel', function() {
+      var index = $(this).find('.carousel-inner > .item.active').index();
+      $(this).find('.caraousel-tooltip-item').eq(index).fadeIn(function() {
+        $(this).addClass('active');
+      });
+    });
+
+    $('.tooltip-carousel').mouseenter(function() {
+      $(this).popover('show');
+    }).mouseleave(function() {
+      $(this).popover('hide');
+    });
+  });
+
+</script>
+
+<script type="text/javascript"> 
+  
+    
+$(document).ready(function(){ <!-- --------> ejecuta el script jquery cuando el documento ha terminado de cargarse -->
+  $("#b1").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+    $("#dialogo").dialog({ <!--  ------> muestra la ventana  -->
+      width: 560,  <!-- -------------> ancho de la ventana -->
+      height: 750,<!--  -------------> altura de la ventana -->
+      show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+      hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+      resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+      position: "center",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+      modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana est 
+    });
+  });
+      
+  });
+
+$(document).ready(function(){ <!-- --------> ejecuta el script jquery cuando el documento ha terminado de cargarse -->
+  $("#b2").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+    $("#mostrar").dialog({ <!--  ------> muestra la ventana  -->
+      width: 560,  <!-- -------------> ancho de la ventana -->
+      height: 750,<!--  -------------> altura de la ventana -->
+      show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+      hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+      resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+      position: "center",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+      modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana est 
+    });
+  });
+      
+  });
+
+
+$(document).ready(function(){ <!-- --------> ejecuta el script jquery cuando el documento ha terminado de cargarse -->
+  $("#b3").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+    $("#mostrar1").dialog({ <!--  ------> muestra la ventana  -->
+      width: 560,  <!-- -------------> ancho de la ventana -->
+      height: 750,<!--  -------------> altura de la ventana -->
+      show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+      hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+      resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+      position: "center",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+      modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana est 
+    });
+  });
+      
+  });
+
+
+
+$(document).ready(function(){ <!-- --------> ejecuta el script jquery cuando el documento ha terminado de cargarse -->
+  $("#b4").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+    $("#mostrar2").dialog({ <!--  ------> muestra la ventana  -->
+      width: 560,  <!-- -------------> ancho de la ventana -->
+      height: 750,<!--  -------------> altura de la ventana -->
+      show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+      hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+      resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+      position: "center",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+      modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana est 
+    });
+  });
+      
+  });
+
+
+
+$(document).ready(function(){ <!-- --------> ejecuta el script jquery cuando el documento ha terminado de cargarse -->
+  $("#b5").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+    $("#mostrar3").dialog({ <!--  ------> muestra la ventana  -->
+      width: 560,  <!-- -------------> ancho de la ventana -->
+      height: 750,<!--  -------------> altura de la ventana -->
+      show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+      hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+      resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+      position: "center",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+      modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana est 
+    });
+  });
+      
+  });
+
+
+
+
+</script>
+
+
+<div id="dialogo" class="ventanas" title="EDITAR EMPLEADO" >
+                
+<form action="#" method="GET" name="formu" class="formularios" >
+ 
+  <fieldset>
+    <legend>EDITAR EMPLEADO</legend>
+    Nombres:<br/>
+    <input type="text" name="nombre" value="" maxlength="15" id="nombre"/>
+    <div id="nom"></div>
+    Apellidos: <br/>
+    <input type="text" name="apellidos" value="" maxlength="15" id="apellidos"/>
+    <div id="ape"></div>
+    Sexo:
+    Masculino<input type="radio" name="sexo" value="m"  />
+    Femenino <input type="radio" name="sexo" value="f"  />
+    <div id="sex"></div>
+    Tipo de Documento:<br/>
+    <select name="tipo">
+    <option value="0">Tipo Documento</option>
+    <option value="1">Cedula de Ciudadania</option>
+    <option value="2">Cedula de Extranjeria</option>
+    <option value="3">Tarjeta de Identidad</option>
+    </select>
+    <div id="tipod"></div>
+    Documento:
+    <br/> 
+    <input type="text" name="documento" value="" size="15" maxlength="15" id="documento" />
+    <div id="doc"></div>
+    Telefono:
+    <br/>
+    <input type="text" name="telefono" value="" size="15" maxlength="15" id="telefono"/>
+    <div id="tel"></div>
+    Ciudad: 
+    <br/>
+    <select name="ciudad">
+    <option value="0">Seleccione Ciudad</option>
+    <option value="Ibague">Ibague</option>
+     <option value="Bogota">Bogota</option>
+    <option value="Medelin">Medellin</option>
+    <option value="Cali">Cali</option>
+    <option value="Pereira">Pereira</option>
+    </select>
+    <div id="ciu"></div> 
+    E-mail:<br/>
+    <input type="text" name="email" value="" size="40" maxlength="45" id="email" />
+    <div id="mail"></div>
+    Cargo:<br/>
+    <select name="cargo">
+    <option value="0">Seleccione Cargo</option>
+    <option value="1">Administrador</option>
+    <option value="2">Mesero</option>
+    <option value="3">Cajero</option>
+    </select> 
+    <div id="car"></div>
+    Rol Usuario:<br/>
+    <select name="rol">
+    <option value="0">Seleccione Rol</option>
+    <option value="1">Administrador</option>
+    <option value="2">Mesero</option>
+    <option value="3">Cajero</option>
+    </select>
+    <div id="ro"></div> 
+    Usuario: 
+    <br/>
+    <input type="text" name="usuario" value="" maxlength="15" id="usuario" onblur="verificar(document.formu.usuario.value,'usu','verifica.php')"/>
+    <div id="usu"></div>
+    Password: 
+    <br/>
+    <input type="password" name="pass" value="" maxlength="12" id="password"/>
+    <div id="pass"></div>
+    Confirmar Password: 
+    <br/>
+    <input type="password" name="pass1" value="" maxlength="12" id="password"/>
+    <div id="pass1"></div>
+    <br/>  
+
+  </fieldset>
+
+ <input id="btnAceptar" onclick="validaregistro()" name="btninsertar" size="3" type="button" value="Grabar Registro" />
+ <input id="btnAceptar1" name="btninsertar" size="3" type="button" value="No se Puede Ingresar el Registro" style="display:none" />
+ <input id="limpiar" onclick="clean()" name="limpiar" size="3" type="reset" value="limpiar Formulario" />
+  
+ 
+ </form>
+ 
+</div>
+
+
+<div id="mostrar" class="ventanas" title="MOSTRAR EMPLEADO" >
+                
+<form action="#" method="GET" name="formu" class="formularios" >
+ 
+  <fieldset>
+    <legend>MOSTRAR EMPLEADO</legend>
+    Nombres:<br/>
+    <input type="text" name="nombre" value="" maxlength="15" id="nombre"/>
+    <div id="nom"></div>
+    Apellidos: <br/>
+    <input type="text" name="apellidos" value="" maxlength="15" id="apellidos"/>
+    <div id="ape"></div>
+    Sexo:
+    Masculino<input type="radio" name="sexo" value="m"  />
+    Femenino <input type="radio" name="sexo" value="f"  />
+    <div id="sex"></div>
+    Tipo de Documento:<br/>
+    <select name="tipo">
+    <option value="0">Tipo Documento</option>
+    <option value="1">Cedula de Ciudadania</option>
+    <option value="2">Cedula de Extranjeria</option>
+    <option value="3">Tarjeta de Identidad</option>
+    </select>
+    <div id="tipod"></div>
+    Documento:
+    <br/> 
+    <input type="text" name="documento" value="" size="15" maxlength="15" id="documento" />
+    <div id="doc"></div>
+    Telefono:
+    <br/>
+    <input type="text" name="telefono" value="" size="15" maxlength="15" id="telefono"/>
+    <div id="tel"></div>
+    Ciudad: 
+    <br/>
+    <select name="ciudad">
+    <option value="0">Seleccione Ciudad</option>
+    <option value="Ibague">Ibague</option>
+     <option value="Bogota">Bogota</option>
+    <option value="Medelin">Medellin</option>
+    <option value="Cali">Cali</option>
+    <option value="Pereira">Pereira</option>
+    </select>
+    <div id="ciu"></div> 
+    E-mail:<br/>
+    <input type="text" name="email" value="" size="40" maxlength="45" id="email" />
+    <div id="mail"></div>
+    Cargo:<br/>
+    <select name="cargo">
+    <option value="0">Seleccione Cargo</option>
+    <option value="1">Administrador</option>
+    <option value="2">Mesero</option>
+    <option value="3">Cajero</option>
+    </select> 
+    <div id="car"></div>
+    Rol Usuario:<br/>
+    <select name="rol">
+    <option value="0">Seleccione Rol</option>
+    <option value="1">Administrador</option>
+    <option value="2">Mesero</option>
+    <option value="3">Cajero</option>
+    </select>
+    <div id="ro"></div> 
+    Usuario: 
+    <br/>
+    <input type="text" name="usuario" value="" maxlength="15" id="usuario" onblur="verificar(document.formu.usuario.value,'usu','verifica.php')"/>
+    <div id="usu"></div>
+    Password: 
+    <br/>
+    <input type="password" name="pass" value="" maxlength="12" id="password"/>
+    <div id="pass"></div>
+    Confirmar Password: 
+    <br/>
+    <input type="password" name="pass1" value="" maxlength="12" id="password"/>
+    <div id="pass1"></div>
+    <br/>  
+
+  </fieldset>
+
+ <input id="btnAceptar" onclick="validaregistro()" name="btninsertar" size="3" type="button" value="Grabar Registro" />
+ <input id="btnAceptar1" name="btninsertar" size="3" type="button" value="No se Puede Ingresar el Registro" style="display:none" />
+ <input id="limpiar" onclick="clean()" name="limpiar" size="3" type="reset" value="limpiar Formulario" />
+  
+ 
+ </form>
+ 
+</div>
+
+
+<div id="mostrar1" class="ventanas" title="MOSTRAR EMPLEADO" >
+                
+<form action="#" method="GET" name="formu" class="formularios" >
+ 
+  <fieldset>
+    <legend>MOSTRAR EMPLEADO</legend>
+    Nombres:<br/>
+    <input type="text" name="nombre" value="" maxlength="15" id="nombre"/>
+    <div id="nom"></div>
+    Apellidos: <br/>
+    <input type="text" name="apellidos" value="" maxlength="15" id="apellidos"/>
+    <div id="ape"></div>
+    Sexo:
+    Masculino<input type="radio" name="sexo" value="m"  />
+    Femenino <input type="radio" name="sexo" value="f"  />
+    <div id="sex"></div>
+    Tipo de Documento:<br/>
+    <select name="tipo">
+    <option value="0">Tipo Documento</option>
+    <option value="1">Cedula de Ciudadania</option>
+    <option value="2">Cedula de Extranjeria</option>
+    <option value="3">Tarjeta de Identidad</option>
+    </select>
+    <div id="tipod"></div>
+    Documento:
+    <br/> 
+    <input type="text" name="documento" value="" size="15" maxlength="15" id="documento" />
+    <div id="doc"></div>
+    Telefono:
+    <br/>
+    <input type="text" name="telefono" value="" size="15" maxlength="15" id="telefono"/>
+    <div id="tel"></div>
+    Ciudad: 
+    <br/>
+    <select name="ciudad">
+    <option value="0">Seleccione Ciudad</option>
+    <option value="Ibague">Ibague</option>
+     <option value="Bogota">Bogota</option>
+    <option value="Medelin">Medellin</option>
+    <option value="Cali">Cali</option>
+    <option value="Pereira">Pereira</option>
+    </select>
+    <div id="ciu"></div> 
+    E-mail:<br/>
+    <input type="text" name="email" value="" size="40" maxlength="45" id="email" />
+    <div id="mail"></div>
+    Cargo:<br/>
+    <select name="cargo">
+    <option value="0">Seleccione Cargo</option>
+    <option value="1">Administrador</option>
+    <option value="2">Mesero</option>
+    <option value="3">Cajero</option>
+    </select> 
+    <div id="car"></div>
+    Rol Usuario:<br/>
+    <select name="rol">
+    <option value="0">Seleccione Rol</option>
+    <option value="1">Administrador</option>
+    <option value="2">Mesero</option>
+    <option value="3">Cajero</option>
+    </select>
+    <div id="ro"></div> 
+    Usuario: 
+    <br/>
+    <input type="text" name="usuario" value="" maxlength="15" id="usuario" onblur="verificar(document.formu.usuario.value,'usu','verifica.php')"/>
+    <div id="usu"></div>
+    Password: 
+    <br/>
+    <input type="password" name="pass" value="" maxlength="12" id="password"/>
+    <div id="pass"></div>
+    Confirmar Password: 
+    <br/>
+    <input type="password" name="pass1" value="" maxlength="12" id="password"/>
+    <div id="pass1"></div>
+    <br/>  
+
+  </fieldset>
+
+ <input id="btnAceptar" onclick="validaregistro()" name="btninsertar" size="3" type="button" value="Grabar Registro" />
+ <input id="btnAceptar1" name="btninsertar" size="3" type="button" value="No se Puede Ingresar el Registro" style="display:none" />
+ <input id="limpiar" onclick="clean()" name="limpiar" size="3" type="reset" value="limpiar Formulario" />
+  
+ 
+ </form>
+ 
+</div>
+
+<div id="mostrar2" class="ventanas" title="EDITAR EMPLEADO" >
+                
+<form action="#" method="GET" name="formu" class="formularios" >
+ 
+  <fieldset>
+    <legend>EDITAR EMPLEADO</legend>
+    Nombres:<br/>
+    <input type="text" name="nombre" value="" maxlength="15" id="nombre"/>
+    <div id="nom"></div>
+    Apellidos: <br/>
+    <input type="text" name="apellidos" value="" maxlength="15" id="apellidos"/>
+    <div id="ape"></div>
+    Sexo:
+    Masculino<input type="radio" name="sexo" value="m"  />
+    Femenino <input type="radio" name="sexo" value="f"  />
+    <div id="sex"></div>
+    Tipo de Documento:<br/>
+    <select name="tipo">
+    <option value="0">Tipo Documento</option>
+    <option value="1">Cedula de Ciudadania</option>
+    <option value="2">Cedula de Extranjeria</option>
+    <option value="3">Tarjeta de Identidad</option>
+    </select>
+    <div id="tipod"></div>
+    Documento:
+    <br/> 
+    <input type="text" name="documento" value="" size="15" maxlength="15" id="documento" />
+    <div id="doc"></div>
+    Telefono:
+    <br/>
+    <input type="text" name="telefono" value="" size="15" maxlength="15" id="telefono"/>
+    <div id="tel"></div>
+    Ciudad: 
+    <br/>
+    <select name="ciudad">
+    <option value="0">Seleccione Ciudad</option>
+    <option value="Ibague">Ibague</option>
+     <option value="Bogota">Bogota</option>
+    <option value="Medelin">Medellin</option>
+    <option value="Cali">Cali</option>
+    <option value="Pereira">Pereira</option>
+    </select>
+    <div id="ciu"></div> 
+    E-mail:<br/>
+    <input type="text" name="email" value="" size="40" maxlength="45" id="email" />
+    <div id="mail"></div>
+    Cargo:<br/>
+    <select name="cargo">
+    <option value="0">Seleccione Cargo</option>
+    <option value="1">Administrador</option>
+    <option value="2">Mesero</option>
+    <option value="3">Cajero</option>
+    </select> 
+    <div id="car"></div>
+    Rol Usuario:<br/>
+    <select name="rol">
+    <option value="0">Seleccione Rol</option>
+    <option value="1">Administrador</option>
+    <option value="2">Mesero</option>
+    <option value="3">Cajero</option>
+    </select>
+    <div id="ro"></div> 
+    Usuario: 
+    <br/>
+    <input type="text" name="usuario" value="" maxlength="15" id="usuario" onblur="verificar(document.formu.usuario.value,'usu','verifica.php')"/>
+    <div id="usu"></div>
+    Password: 
+    <br/>
+    <input type="password" name="pass" value="" maxlength="12" id="password"/>
+    <div id="pass"></div>
+    Confirmar Password: 
+    <br/>
+    <input type="password" name="pass1" value="" maxlength="12" id="password"/>
+    <div id="pass1"></div>
+    <br/>  
+
+  </fieldset>
+
+ <input id="btnAceptar" onclick="validaregistro()" name="btninsertar" size="3" type="button" value="Grabar Registro" />
+ <input id="btnAceptar1" name="btninsertar" size="3" type="button" value="No se Puede Ingresar el Registro" style="display:none" />
+ <input id="limpiar" onclick="clean()" name="limpiar" size="3" type="reset" value="limpiar Formulario" />
+  
+ 
+ </form>
+ 
+</div>
+
+
+<div id="mostrar3" class="ventanas" title="EDITAR EMPLEADO" >
+                
+<form action="#" method="GET" name="formu" class="formularios" >
+ 
+  <fieldset>
+    <legend>EDITAR EMPLEADO</legend>
+    Nombres:<br/>
+    <input type="text" name="nombre" value="" maxlength="15" id="nombre"/>
+    <div id="nom"></div>
+    Apellidos: <br/>
+    <input type="text" name="apellidos" value="" maxlength="15" id="apellidos"/>
+    <div id="ape"></div>
+    Sexo:
+    Masculino<input type="radio" name="sexo" value="m"  />
+    Femenino <input type="radio" name="sexo" value="f"  />
+    <div id="sex"></div>
+    Tipo de Documento:<br/>
+    <select name="tipo">
+    <option value="0">Tipo Documento</option>
+    <option value="1">Cedula de Ciudadania</option>
+    <option value="2">Cedula de Extranjeria</option>
+    <option value="3">Tarjeta de Identidad</option>
+    </select>
+    <div id="tipod"></div>
+    Documento:
+    <br/> 
+    <input type="text" name="documento" value="" size="15" maxlength="15" id="documento" />
+    <div id="doc"></div>
+    Telefono:
+    <br/>
+    <input type="text" name="telefono" value="" size="15" maxlength="15" id="telefono"/>
+    <div id="tel"></div>
+    Ciudad: 
+    <br/>
+    <select name="ciudad">
+    <option value="0">Seleccione Ciudad</option>
+    <option value="Ibague">Ibague</option>
+     <option value="Bogota">Bogota</option>
+    <option value="Medelin">Medellin</option>
+    <option value="Cali">Cali</option>
+    <option value="Pereira">Pereira</option>
+    </select>
+    <div id="ciu"></div> 
+    E-mail:<br/>
+    <input type="text" name="email" value="" size="40" maxlength="45" id="email" />
+    <div id="mail"></div>
+    Cargo:<br/>
+    <select name="cargo">
+    <option value="0">Seleccione Cargo</option>
+    <option value="1">Administrador</option>
+    <option value="2">Mesero</option>
+    <option value="3">Cajero</option>
+    </select> 
+    <div id="car"></div>
+    Rol Usuario:<br/>
+    <select name="rol">
+    <option value="0">Seleccione Rol</option>
+    <option value="1">Administrador</option>
+    <option value="2">Mesero</option>
+    <option value="3">Cajero</option>
+    </select>
+    <div id="ro"></div> 
+    Usuario: 
+    <br/>
+    <input type="text" name="usuario" value="" maxlength="15" id="usuario" onblur="verificar(document.formu.usuario.value,'usu','verifica.php')"/>
+    <div id="usu"></div>
+    Password: 
+    <br/>
+    <input type="password" name="pass" value="" maxlength="12" id="password"/>
+    <div id="pass"></div>
+    Confirmar Password: 
+    <br/>
+    <input type="password" name="pass1" value="" maxlength="12" id="password"/>
+    <div id="pass1"></div>
+    <br/>  
+
+  </fieldset>
+
+ <input id="btnAceptar" onclick="validaregistro()" name="btninsertar" size="3" type="button" value="Grabar Registro" />
+ <input id="btnAceptar1" name="btninsertar" size="3" type="button" value="No se Puede Ingresar el Registro" style="display:none" />
+ <input id="limpiar" onclick="clean()" name="limpiar" size="3" type="reset" value="limpiar Formulario" />
+  
+ 
+ </form>
+ 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

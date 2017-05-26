@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>SISTEMA DE GESTION TECNOLOGICA ADMINISTRATIVA </title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stylus.css" rel="stylesheet">
+    <link href="js/jquery-ui.min.css" rel="stylesheet">
+    <link href="js/jquery-ui.structure.min.css" rel="stylesheet">
+    <link href="js/jquery-ui.theme.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+<body>
+       
+<header id="banner">
+<div class="container">
+<div class="row">
+<div class="col-md-7"><h1>SISTEMA DE GESTION </h1></div>
+<div class="col-md-7"><h4>ALMACEN - INSTITUTO TECNOLOGICO</h4></div>
+</div>
+</div>
+</header>
+
+<!--Barra de Navegacion-->
+
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+
+<nav class=" menu navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" 
+            data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    
+    <div class="collapse navbar-collapse menup1" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav menup1">
+        <li class="dropdown menup">
+          <a href="menu.html" >  SALIR
+          </a>
+        </li>
+      </ul>
+
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+  </div>
+</div>
+
+
+
+<!--Modulos de Contenido-->
+
+  <div class="container">
+  <section id="modulos">
+  <div class="row">
+
+<div class="col-md-3">
+</div>  
+
+<div class="col-md-3">
+<article class="texto2" >
+<header class="tituloa"><h3>INVENTARIO</h3></header>
+<figure><img src="img/almacen/inventario.jpg" height="150" width="200" alt="" align="center"></figure>
+<div  class="link1"><a href="inventario.html">Ingresar</a></div>
+</article>
+</div>
+
+
+<div class="col-md-3">
+<article class="texto3">
+    <header class="tituloa"><h3>PRODUCTO</h3></header>
+    <figure><img src="img/almacen/producto.png" height="150" width="200" alt="" align="center"></figure>
+<div class="link1"><a href="producto.html">Ingresar</a></div>
+ </article>
+ </div>
+
+<div class="col-md-2">
+</div> 
+
+</section>
+</div>
+
+
+<div class="container">
+  <section id="modulos">
+  <div class="row">   
+
+<div class="col-md-12">
+</div> 
+
+<div class="col-md-12">
+</div> 
+
+</section>
+</div>
+
+
+<!--Pie de Pagina -->
+
+<div class="container">
+
+<footer class="pie">
+  <div class="row">
+    <div class="col-md-4"> </div>
+  <div class="col-md-4"> 
+   <nav class="navegacion"><a href="">INICIO</a> | <a href="">PRODUCTOS</a> | <a href="">NOSOTROS</a> | <a href="">CONTACTANOS</a> </nav> 
+  <section class="opciones">
+  </section>
+  </footer>
+
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+
+ $(function() {
+    $('.tooltip-carousel').popover();
+
+    $('#carousel-example-generic').on('slide.bs.carousel', function() {
+      $('.tooltip-carousel').popover('hide');
+      $(this).find('.caraousel-tooltip-item.active').fadeOut(function() {
+        $(this).removeClass('active');
+      });
+    });
+
+    $('#carousel-example-generic').on('slid.bs.carousel', function() {
+      var index = $(this).find('.carousel-inner > .item.active').index();
+      $(this).find('.caraousel-tooltip-item').eq(index).fadeIn(function() {
+        $(this).addClass('active');
+      });
+    });
+
+    $('.tooltip-carousel').mouseenter(function() {
+      $(this).popover('show');
+    }).mouseleave(function() {
+      $(this).popover('hide');
+    });
+  });
+
+</script>
+
+
+  </body>
+</html>
