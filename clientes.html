@@ -290,9 +290,36 @@ $(document).ready(function(){ <!-- --------> ejecuta el script jquery cuando el 
 <div id="dialogo" class="ventanas" title="EDITAR CLIENTE" >
                 
 <form action="#" method="GET" name="formu" class="formularios" >
- 
   <fieldset>
-    <legend>EDITAR CLIENTE</legend>
+    <legend>EDITAR EMPLEADO</legend>
+    Tipo de Busqueda:<br/>
+    <select name="rol">
+    <option value="0">Descripcion</option>
+    <option value="1">Identificacion</option>
+    </select>
+    <div id="ro"></div> 
+     Tipo de Documento:<br/>
+    <select name="tipo">
+    <option value="0">Tipo Documento</option>
+    <option value="1">Cedula de Ciudadania</option>
+    <option value="2">Cedula de Extranjeria</option>
+    <option value="3">Tarjeta de Identidad</option>
+    </select>
+
+    <input type="text" name="buscar" value="" id="buscar" />
+    <div id="ape"></div>
+
+  </fieldset>
+
+<br>
+ <input id="btnAceptar" onclick="validaregistro()" name="btninsertar" size="3" type="button" value="BUSCAR " />
+
+ 
+ </form>
+<hr>
+<form action="#" method="GET" name="formu" class="formularios" >
+<fieldset>
+    <legend>Resultados</legend>
     Nombres:<br/>
     <input type="text" name="nombre" value="" maxlength="15" id="nombre"/>
     <div id="nom"></div>
@@ -332,7 +359,25 @@ $(document).ready(function(){ <!-- --------> ejecuta el script jquery cuando el 
     <div id="ciu"></div> 
     E-mail:<br/>
     <input type="text" name="email" value="" size="40" maxlength="45" id="email" />
-    <div id="mail"></div> 
+    <div id="mail"></div>
+    Area:<br/>
+    <select name="cargo">
+    <option value="0">Seleccione Area</option>
+    <option value="1">Gerencial</option>
+    <option value="2">Administradores</option>
+    <option value="3">Analista</option>
+    <option value="3">Programadores</option>
+
+    </select> 
+    <div id="car"></div>
+    Rol Usuario:<br/>
+    <select name="rol">
+    <option value="0">Seleccione Cargo</option>
+    <option value="1">Administrador</option>
+    <option value="2">Jefe de nomina</option>
+    <option value="3">Jefe de Inventarios</option>
+    </select>
+    <div id="ro"></div> 
     Usuario: 
     <br/>
     <input type="text" name="usuario" value="" maxlength="15" id="usuario" onblur="verificar(document.formu.usuario.value,'usu','verifica.php')"/>
@@ -348,13 +393,6 @@ $(document).ready(function(){ <!-- --------> ejecuta el script jquery cuando el 
     <br/>  
 
   </fieldset>
-
- <input id="btnAceptar" onclick="validaregistro()" name="btninsertar" size="3" type="button" value="Grabar Registro" />
- <input id="btnAceptar1" name="btninsertar" size="3" type="button" value="No se Puede Ingresar el Registro" style="display:none" />
- <input id="limpiar" onclick="clean()" name="limpiar" size="3" type="reset" value="limpiar Formulario" />
-  
- 
- </form>
  
 </div>
 
